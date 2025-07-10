@@ -33,4 +33,13 @@ jobs:
           push: true
           platforms: linux/arm64
           tags: ${{ env.IMAGE_NAME }}:${{ env.TAG }}
+  deploy:
+    name: Rollout Restart on Pi
+    runs-on: self-hosted
+    needs: build-and-push
+
+    steps:
+      - name: Restart Kubernetes Deployment
+        run: |
+          kubectl rollout restart deployment next-pi-app
 

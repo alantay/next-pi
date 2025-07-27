@@ -17,7 +17,7 @@
   } */
 }
 
-.hamburger:hover {
+.hamburger.open {
   rect:first-child {
     transform: translateY(6px) rotate(45deg);
   }

@@ -2,7 +2,7 @@
 
 import Logo from "../Logo";
 import Link from "next/link";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import styles from "./Navigation.module.css";
 import { createPortal } from "react-dom";
 

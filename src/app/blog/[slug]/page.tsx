@@ -1,5 +1,5 @@
 import path from "path";
-import { readdir, readFile } from "fs/promises";
+import { readdir } from "fs/promises";
 
 const contentDir = path.join(process.cwd(), "src/content/blogpost");
 

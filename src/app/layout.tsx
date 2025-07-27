@@ -1,17 +1,7 @@
 import type { Metadata } from "next";
 import Navigation from "./_components/Navigation";
 import "./globals.css";
-import { ibm } from "./fonts";
-
-// const geistSans = Geist({
-//   variable: "--font-geist-sans",
-//   subsets: ["latin"],
-// });
-
-// const geistMono = Geist_Mono({
-//   variable: "--font-geist-mono",
-//   subsets: ["latin"],
-// });
+import { merriweather, montserrat } from "./fonts";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -26,13 +16,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        // className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-        className={`antialiased max-w-4xl mx-auto py-14 px-4 ${ibm.className}`}
+        className={`text-body bg-background mx-auto pb-20 antialiased ${merriweather.variable} ${montserrat.variable}`}
       >
-        <header>
-          <Navigation />
+        <header className="bg-hero-bg px-10 pt-8">
+          <div className="mx-auto flex max-w-5xl flex-col items-center justify-center">
+            <Navigation className="w-full" />
+          </div>
         </header>
-        <div className="mt-4">{children}</div>
+        <div>{children}</div>
+        <div id="portal-root"></div>
       </body>
     </html>
   );

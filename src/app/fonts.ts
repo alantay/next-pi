@@ -1,31 +1,13 @@
-import { Inter, Manrope, IBM_Plex_Sans, IBM_Plex_Mono } from "next/font/google";
-import localFont from "next/font/local";
+import { Montserrat, Merriweather } from "next/font/google";
 
-export const satoshi = localFont({
-  src: "../../public/fonts/Satoshi-Variable.woff2",
-  style: "normal",
+export const montserrat = Montserrat({
+  subsets: ["latin"],
+  variable: "--font-montserrat",
+  weight: ["300", "400", "500", "600", "700"],
 });
 
-export const inter = Inter({
+export const merriweather = Merriweather({
   subsets: ["latin"],
-  variable: "--font-inter",
-  // weight: ["400", "700"],
-});
-
-export const manrope = Manrope({
-  subsets: ["latin"],
-  variable: "--font-manrope",
-  weight: ["400", "700"],
-});
-
-export const ibm = IBM_Plex_Sans({
-  subsets: ["latin"],
-  variable: "--font-ibm",
-  weight: ["400", "700"],
-});
-
-export const ibmMono = IBM_Plex_Mono({
-  subsets: ["latin"],
-  variable: "--font-ibm-mono",
-  weight: ["400", "700"],
+  variable: "--font-merriweather",
+  weight: ["300", "400", "700", "900"],
 });

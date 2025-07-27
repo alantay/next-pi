@@ -1,12 +1,15 @@
-import { satoshi } from "../../fonts";
+import Link from "next/link";
 
 function Logo({ className = "" }) {
   return (
-    <h1
-      className={`text-xl text-brand font-extrabold ${className} ${satoshi.className}`}
+    <Link
+      href="/"
+      className={`text-2xl text-logo ${className} font-sans font-medium`}
     >
-      Alan Tay
-    </h1>
+      <span>&lt;</span>
+      <span>ALAN TAY</span>
+      <span>/&gt;</span>
+    </Link>
   );
 }
 

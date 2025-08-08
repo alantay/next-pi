@@ -7,14 +7,6 @@
       opacity 300ms ease-in;
     transform-origin: center;
   }
-  /* rect {
-    transition:
-      y 300ms ease-in 300ms,
-      rotate 300ms ease-in,
-      opacity 0ms 300ms;
-
-    transform-origin: 10 13;
-  } */
 }
 
 .hamburger.open {
@@ -28,26 +20,4 @@
   rect:nth-child(2) {
     opacity: 0;
   }
-  /* rect {
-    transition:
-      y 300ms ease-in,
-      rotate 300ms ease-in 300ms,
-      opacity 0ms 300ms;
-  }
-
-  rect:first-child,
-  rect:last-child {
-    y: 15;
-  }
-  rect:first-child {
-    rotate: 45deg;
-  }
-
-  rect:last-child {
-    rotate: -45deg;
-  }
-
-  rect:nth-child(2) {
-    opacity: 0;
-  } */
 }

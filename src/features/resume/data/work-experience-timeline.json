@@ -1,0 +1,32 @@
+[
+  {
+    "title": "Senior Frontend Engineer – Google Fiber (XWF)",
+    "date": "May 2024 – Present",
+    "descriptions": [
+      "Developed the customer-facing web portal and support page using **Next.js**, improving performance and user experience.",
+      "Maintained and enhanced legacy systems built with **AngularJS**, ensuring feature parity and a smooth transition path.",
+      "Collaborated cross-functionally with designers, backend engineers, and product teams to deliver accessible, responsive, and scalable web applications."
+    ]
+  },
+  {
+    "title": "Senior Full Stack Developer – Standard Chartered Bank",
+    "date": "Jan 2018 – Jul 2024",
+    "descriptions": [
+      "Developed and maintained internal applications for Relationship Managers (RMs) to assess counterparty default risk and monitor SCB’s overall risk exposure.",
+      "Contributed to systems ensuring compliance with **Bank of England** regulations introduced after the subprime crisis to safeguard banks and consumers.",
+      "Built responsive, performant UIs using **React**, **Redux**, and **RxJS**.",
+      "Designed and integrated backend services using **Spring Boot**.",
+      "Collaborated closely with business analysts and risk teams to deliver secure and accurate reporting tools."
+    ]
+  },
+  {
+    "title": "Frontend Developer – Minitheory Pte Ltd",
+    "date": "Feb 2016 – Oct 2021",
+    "descriptions": [
+      "Built responsive, production-grade **React + Redux** web interfaces for clients such as **Giving.sg** and **Aware.org.sg**, aligning closely with high-fidelity UI/UX designs.",
+      "Partnered with **IDEO** to deliver interactive web experiences that emphasized storytelling and user engagement.",
+      "Created rapid web prototypes to support iterative design processes and client feedback loops.",
+      "Collaborated with designers and UX researchers to ensure accurate and consistent implementation of visual and interaction design."
+    ]
+  }
+]

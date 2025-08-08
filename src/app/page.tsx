@@ -1,14 +1,13 @@
-import IntroSection from "./_components/IntroSection";
+import FeaturedBlogPost from "./_components/FeaturedBlogPost";
 import Hero from "./_components/Hero";
+import IntroSection from "./_components/IntroSection";
 
 export default async function Home() {
   return (
     <>
-      <main>
-        <Hero />
-        <IntroSection />
-      </main>
-      <footer></footer>
+      <Hero />
+      <IntroSection />
+      <FeaturedBlogPost />
     </>
   );
 }

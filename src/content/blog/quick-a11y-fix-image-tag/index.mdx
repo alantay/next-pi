@@ -1,0 +1,194 @@
+import { compile } from "@mdx-js/mdx";
+import Image from "next/image";
+
+export const frontmatter = {
+  title: "Quick Accessibility: Image Alt Text",
+  date: "2025-07-29",
+  image: "/blog/quick-a11y-fix-image-tag/images/a11y-main-img.png",
+  imageAltText:
+    "Illustration of a person using a computer to implement web accessibility features, showing examples of alt text for an image of a cat, an ARIA-label for a button, and the concept of tab order.",
+  toc: [
+    { title: "Introduction", id: "introduction" },
+    { title: "What is an alt tag?", id: "what-is" },
+    {
+      title: "Always write your alt tag, even if it's blank",
+      id: "always-write",
+    },
+    { title: "Write meaningful description", id: "meaningful-description" },
+    { title: "Things to avoid", id: "to-avoid" },
+  ],
+};
+
+<div id="introduction" className="relative -top-100"></div>
+
+For the longest time, I ignored the `alt` attribute in image tags. The only reason it ever showed up in my code was because the linter complained. I didn't think much about it. I just threw in a blank or some placeholder text to make the warning go away.
+
+It was only when I was thinking about what topic to write for my newly minted blog that I decided to explore the mysterious alt tag. Don't get me wrong, I knew what alt text was for. Or at least I thought I did. But then I tried using a screen reader and instantly regretted every image I ever uploaded without one. It's like opening a present and finding only the item name inside.
+
+Here's what I found.
+
+## <span id="what-is">What is an alt tag?</span>
+
+Maybe a quick intro is needed if you're not familiar.
+
+The `alt` attribute (short for "alternative text") is used in HTML to describe the content of an image. If the image doesn't load, or if someone is using a screen reader, this text is what gets shown or read out loud.
+
+Think of it as a caption for machines. It helps assistive tech understand what's in the image, whether it's a cat, a chart, or a poorly cropped meme.
+
+Alt text is also useful for web crawlers to understand what the image contains. This can help with SEO. So alt tags are not just about accessibility, they can also improve your site's visibility in search engines.
+
+And remember those broken image icons that just show a file name? Alt text can help avoid that. Instead of a blank box or cryptic file name, users will see something informative.
+
+## <span id="always-write">Always write your alt tag, even if it's blank</span>
+
+That might sound weird at first. Why write something just to leave it empty?
+
+Because `alt=""` is not the same as leaving the attribute out completely. Leaving it out usually means the screen reader ends up reading the file name. Imagine the screen reader read out something like `image-938472_final_final2.png`? Not fun.
+
+If the image is decorative, like a border, icon, or some artsy flair, use an empty alt tag. That tells assistive tech there's nothing important and it will skip it. This way, the user won't be distracted by unnecessary information.
+
+## <span id="meaningful-description">Write meaningful description</span>
+
+If the image does carry meaning, write a short, helpful description that
+tells the story your image is trying to show.
+
+Here are some examples... <br/><br/>
+
+**Informative Image (e.g., a chart, diagram, or infographic):**
+
+<div className="my-2 flex gap-2 rounded bg-gray-100 p-4">
+  <div>
+    <Image
+      className="rounded"
+      src="/blog/quick-a11y-fix-image-tag/images/barchart.png"
+      width={600}
+      height={600}
+      alt="Bar chart showing website traffic sources: Organic Search (60%), Direct (20%), Referral (10%), Social Media (10%)."
+    />
+  </div>
+  <span>
+    ```html
+    <img
+      src="barchart.png"
+      width="600"
+      height="600"
+      alt="Bar chart showing website traffic sources: Organic Search (60%), Direct (20%), Referral (10%), Social Media (10%)."
+    />
+    ```
+  </span>
+</div>
+This provides all the essential data presented visually, allowing a user who
+can't see the chart to understand its key takeaway.
+
+<br />
+<br />
+**Decorative Image**
+
+<div className="my-2 flex gap-2 rounded bg-gray-100 p-3">
+  <div>
+    <Image
+      className="rounded"
+      src="/blog/quick-a11y-fix-image-tag/images/pattern.png"
+      width={500}
+      height={100}
+      alt=""
+    />
+  </div>
+  <span>
+    ```html
+    <img src="barchart.png" width="400" height="400" alt="" />
+    ```
+  </span>
+</div>
+If the image serves purely decorative purposes and doesn't convey any meaningful
+information, an empty alt text tells screen readers to skip it, preventing
+unnecessary clutter. If it has a minimal function (like a visual separator), a
+brief, simple description is acceptable
+
+<br />
+<br />
+
+**Functional Image (e.g., a button, an icon)**
+
+<div className="my-2 flex gap-2 rounded bg-gray-100 p-3">
+  <div>
+    <Image
+      className="rounded"
+      src="/blog/quick-a11y-fix-image-tag/images/print-icon.svg"
+      width={50}
+      height={50}
+      alt=""
+    />
+  </div>
+  <span className="flex-1">
+    ```html
+    <a href="javascript:print()">
+      <img src="print-icon.svg" width="50" height="50" alt="Print this page" />
+    </a>
+    ```
+  </span>
+</div>
+If clicking the image does something, describe that. Don't just say what it
+looks like "three stacked lines" doesn't mean much when you're trying to print
+your document.
+
+<br />
+<br />
+
+**Image as Text**
+
+<div className="my-2 flex gap-2 rounded bg-gray-100 p-3">
+  <div>
+    <Image
+      className="rounded"
+      src="/blog/quick-a11y-fix-image-tag/images/testimony.png"
+      width={450}
+      height={450}
+      alt=""
+    />
+  </div>
+  <span className="flex-1">
+    ```html
+    <img
+      src="print-icon.svg"
+      width="450"
+      height="450"
+      alt="Testimonial from Sarah K.: 'The best product I've ever used! Highly recommend.'"
+    />
+    ```
+  </span>
+</div>
+This describes the function of the image, rather than just its appearance. A
+user knows what action will occur if they interact with it.
+
+## <span id="to-avoid">Things to avoid</span>
+
+- **"Image of..." / "Picture of..."**  
+  Screen readers already announce it's an image. Saying “Image of a cat” is like saying “Book titled 'Book Title'”.
+
+- **Keyword stuffing**  
+  Don't treat alt text like an SEO hack. `marketing chart strategy data success infographic` doesn't help anyone.
+
+- **Too vague**  
+  “Nice view” or “screenshot” tells the user almost nothing. Be a little more specific, e.g., “Mountain view at sunrise over Yangshuo”.
+
+- **Too detailed**  
+  You don't need to describe every pixel. Stick to what's relevant in the context of your content.
+
+- **Copy-pasting the caption**  
+  If your image already has a visible caption, try to add complementary value in the alt text, not just duplicate it.
+
+- **Alt text for decorative fluff**  
+  If it's purely visual (like a divider or background squiggle), use `alt=""` so screen readers skip it.
+
+## Wrapping up
+
+I really hope this little deep dive has convinced you to give a bit more thought to your alt text, whether you're crafting a masterpiece or strategically letting it be. As I was research on this article, a nagging thought popped into my head:
+
+_"If alt text is also meant to be good for SEO, aren't people just going to try and game the system, stuffing it with keywords instead of actually describing the image?"_
+
+People loving gaming the system. Look at what happen to Chocolate Finance when they give too good a benefits to their customers.
+
+Well fortunately, as long as we stick to writing good, user-centric alt text, it's inherently fantastic for SEO all on its own. If you try to pull a fast one with keyword-stuffed alt tags, that's going to turn around and bite you. Modern search engine algorithms are pretty smart, they can sniff out genuine descriptions from desperate keyword stuffing from a mile away, and your site could get penalized for it.
+
+If you want to know more, the <a href="https://www.w3.org/WAI/tutorials/images/decision-tree/" target="_blank">Web Accessibility Initiative (WAI)</a> has a great visual decision tree to guide you.

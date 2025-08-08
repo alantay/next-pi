@@ -2,12 +2,13 @@ import Image from "next/image";
 
 const Introsection = ({ className = "" }: { className?: string }) => {
   return (
-    <div className={`flex justify-center px-10 ${className}`}>
-      <div className="flex max-w-5xl flex-col items-center justify-center gap-10 pt-20 md:flex-row md:items-center">
+    <section className={`flex justify-center px-10 py-20 ${className}`}>
+      <div className="flex w-full max-w-5xl flex-col items-center justify-center gap-10 md:flex-row md:items-center">
         <Image
           src="/avatar-using-laptop.png"
-          width={256}
-          height={256}
+          width={620}
+          height={932}
+          className="w-1/3"
           alt="image of man in labcoat holding a test tube"
         />
 
@@ -23,7 +24,7 @@ const Introsection = ({ className = "" }: { className?: string }) => {
           </p>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
+import Footer from "./_components/Footer";
 import Navigation from "./_components/Navigation";
+import { headingFont, monoSpaceFont, sanSerifFont, serifFont } from "./fonts";
 import "./globals.css";
-import { merriweather, montserrat } from "./fonts";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -14,16 +15,20 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`text-body bg-background mx-auto pb-20 antialiased ${merriweather.variable} ${montserrat.variable}`}
-      >
-        <header className="bg-hero-bg px-10 pt-8">
-          <div className="mx-auto flex max-w-5xl flex-col items-center justify-center">
-            <Navigation className="w-full" />
-          </div>
-        </header>
-        <div>{children}</div>
+    <html
+      lang="en"
+      className={`${headingFont.variable} ${monoSpaceFont.variable} ${serifFont.variable} ${sanSerifFont.variable}`}
+    >
+      <body className={`text-body bg-background mx-auto antialiased`}>
+        <div className="flex min-h-screen flex-col">
+          <header className="bg-hero-bg sticky px-10 pt-5">
+            <div className="mx-auto flex max-w-5xl flex-col items-center justify-center">
+              <Navigation className="w-full" />
+            </div>
+          </header>
+          <main className="flex-1">{children}</main>
+          <Footer />
+        </div>
         <div id="portal-root"></div>
       </body>
     </html>

@@ -1,13 +1,34 @@
-import { Montserrat, Merriweather } from "next/font/google";
+import {
+  IBM_Plex_Mono,
+  Merriweather,
+  Montserrat,
+  Roboto,
+} from "next/font/google";
 
-export const montserrat = Montserrat({
+export const headingFont = Montserrat({
   subsets: ["latin"],
-  variable: "--font-montserrat",
-  weight: ["300", "400", "500", "600", "700"],
+  variable: "--sans-font",
+  style: ["italic", "normal"],
+  weight: ["400", "500", "600", "700", "800"],
 });
 
-export const merriweather = Merriweather({
+export const serifFont = Merriweather({
   subsets: ["latin"],
-  variable: "--font-merriweather",
-  weight: ["300", "400", "700", "900"],
+  variable: "--serif-font",
+  weight: ["400", "700"],
+  style: ["italic", "normal"],
+});
+
+export const sanSerifFont = Roboto({
+  subsets: ["latin"],
+  variable: "--body-font",
+  weight: ["400", "500", "600", "700"],
+  fallback: ["sans-serif"],
+  style: ["italic", "normal"],
+});
+
+export const monoSpaceFont = IBM_Plex_Mono({
+  subsets: ["latin"],
+  variable: "--mono-font",
+  weight: ["400", "500"],
 });

@@ -4,7 +4,7 @@ function Logo({ className = "" }) {
   return (
     <Link
       href="/"
-      className={`text-2xl text-logo ${className} font-sans font-medium`}
+      className={`text-logo font-sans text-2xl font-medium ${className}`}
     >
       <span>&lt;</span>
       <span>ALAN TAY</span>

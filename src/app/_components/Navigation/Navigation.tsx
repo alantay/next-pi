@@ -1,10 +1,10 @@
 "use client";
 
-import Logo from "../Logo";
 import Link from "next/link";
 import { useState } from "react";
-import styles from "./Navigation.module.css";
 import { createPortal } from "react-dom";
+import Logo from "../Logo";
+import styles from "./Navigation.module.css";
 
 function Navigation({ className = "" }: { className?: string }) {
   const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
@@ -23,8 +23,8 @@ function Navigation({ className = "" }: { className?: string }) {
             </Link>
           </li>
           <li>
-            <Link onClick={closeMobileNav} href="/projects">
-              Projects
+            <Link onClick={closeMobileNav} href="/resume">
+              Resume
             </Link>
           </li>
           <li>
@@ -46,23 +46,37 @@ function Navigation({ className = "" }: { className?: string }) {
   return (
     <nav aria-label="primary navigation" className={` ${className}`}>
       <div className="text-nav-link flex items-end justify-between pb-6">
-        <Logo className="mr-18" />
+        <Logo className="mr-18 text-gray-50" />
         <ul className="hidden gap-10 space-x-4 font-sans text-lg font-semibold md:flex">
           <li>
-            <Link href="/about">About</Link>
-          </li>
-          <li>
-            <Link href="/projects" className="">
-              Projects
+            <Link
+              href="/about"
+              className="relative after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 after:bg-current after:transition-all after:duration-300 hover:after:w-full"
+            >
+              About
             </Link>
           </li>
           <li>
-            <Link href="/blog" className="">
+            <Link
+              href="/resume"
+              className="relative after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 after:bg-current after:transition-all after:duration-300 hover:after:w-full"
+            >
+              Resume
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/blog"
+              className="relative after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 after:bg-current after:transition-all after:duration-300 hover:after:w-full"
+            >
               Blog
             </Link>
           </li>
           <li>
-            <Link href="/contact" className="">
+            <Link
+              href="/contact"
+              className="relative after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 after:bg-current after:transition-all after:duration-300 hover:after:w-full"
+            >
               Contact
             </Link>
           </li>
@@ -70,7 +84,7 @@ function Navigation({ className = "" }: { className?: string }) {
         <button
           role="button"
           aria-controls="primary navigation mobile"
-          aria-expanded="false"
+          aria-expanded={isMobileNavOpen}
           className="w-6 md:hidden"
           onClick={() => setIsMobileNavOpen((prev) => !prev)}
         >

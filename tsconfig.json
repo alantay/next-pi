@@ -28,7 +28,7 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "src/features/resume/components/Timeline/Timeline.mdx",
-    "src/app/about/page.mdx"
+    "src/app/about/page.tsx"
   ],
   "exclude": ["node_modules"]
 }

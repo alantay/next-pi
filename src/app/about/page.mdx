@@ -1,35 +1,56 @@
-import Content from "@/features/about/content/index.mdx";
+import Timeline from "@/features/resume/components/Timeline";
+import workExperience from "@/features/resume/data/work-experience-timeline.json";
 import Image from "next/image";
 
-<div className="mx-auto grid max-w-5xl grid-cols-12 items-start gap-8 p-10">
-  <div className="col-span-3">
-    <Image
-      src="/about/hiking-avatar.png"
-      alt="profile"
-      width={1024}
-      height={1536}
-      className="w-full rounded-xl"
-    />
-  </div>
-  <div className="prose prose-lg prose-neutral dark:prose-invert col-span-9 max-w-none">
-    # Hey, I'm Alan.
+<div className="p-10 mx-auto text-lg font-body max-w-5xl">
+  <article className=" grid grid-cols-12 items-start gap-8 ">
+    <div className="col-span-3">
+      <Image
+        src="/about/hiking-avatar.png"
+        alt="profile"
+        width={1024}
+        height={1536}
+        className="w-full rounded-xl"
+      />
+    </div>
+    <div className="col-span-9">
+      # Hey, I'm Alan.
 
-    <div className='font-body'>
-    I'm a developer who cares about building things that feel good to use, fast, accessible, and thoughtfully designed (with only the occasional overengineering).
+      I'm a developer who cares about building things that feel good to use, fast, accessible, and thoughtfully designed (with only the occasional overengineering).
 
-    I like clean code, clear communication, and naming things properly, even if it takes me 10 minutes to decide.
+      I like clean code, clear communication, and naming things properly, even if it takes me 10 minutes to decide.
 
-    Things I do outside of work:
+      Things I do outside of work:
 
-    - Climb rocks to solve problems without a keyboard,
-    - Cycle long distances for Type 2 fun and strong calves,
-    - Cook garlic fried rice with too much garlic (if that's a thing) and chase the perfect Nyonya curry.
+      - Climb rocks to solve problems without a keyboard,
+      - Cycle long distances for Type 2 fun and strong calves,
+      - Cook garlic fried rice with too much garlic (if that's a thing) and chase the perfect Nyonya curry.
 
-    This site is where I write down what I'm learning, so I don't forget, and maybe it helps someone else.
+      This site is where I write down what I'm learning, so I don't forget, and maybe it helps someone else.
 
-    If you build, break, or are just curious, we'll probably get along.
+      If you build, break, or are just curious, we'll probably get along.
 
     </div>
 
-  </div>
+  </article>
+
+---
+
+  <article>
+    <div className="grid grid-cols-12 gap-8">
+      <Image
+        src="/about/work-avatar.png"
+        width={931}
+        height={893}
+        alt="avatar in business wear using the laptop"
+        className="col-span-3"
+      />
+      <div className="col-span-9 mt-5">
+        <h2 className="mb-4 font-sans text-3xl font-semibold text-heading">Work Experience</h2>
+        <Timeline data={workExperience} />
+      </div>
+
+    </div>
+
+  </article>
 </div>

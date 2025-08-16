@@ -15,7 +15,7 @@ function Navigation({ className = "" }: { className?: string }) {
     const portalRoot = document.getElementById("portal-root");
     if (!portalRoot) return null;
     return createPortal(
-      <div className="motion-preset-fade absolute top-22 h-1/2 w-full bg-gray-50 text-neutral-800">
+      <div className="motion-preset-fade absolute top-22 h-1/2 w-full bg-gray-50 text-gray-800">
         <ul className="flex flex-col items-center gap-4 py-20">
           <li>
             <Link href="/about" onClick={closeMobileNav}>
@@ -54,14 +54,6 @@ function Navigation({ className = "" }: { className?: string }) {
               className="relative after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 after:bg-current after:transition-all after:duration-300 hover:after:w-full"
             >
               About
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="/resume"
-              className="relative after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 after:bg-current after:transition-all after:duration-300 hover:after:w-full"
-            >
-              Resume
             </Link>
           </li>
           <li>

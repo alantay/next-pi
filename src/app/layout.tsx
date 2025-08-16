@@ -1,3 +1,4 @@
+import ThemeSwitcher from "@/components/ThemeSwitcher";
 import type { Metadata } from "next";
 import Footer from "./_components/Footer";
 import Navigation from "./_components/Navigation";
@@ -21,9 +22,10 @@ export default function RootLayout({
     >
       <body className={`text-body bg-background mx-auto antialiased`}>
         <div className="flex min-h-screen flex-col">
-          <header className="bg-hero-bg sticky px-10 pt-5">
+          <header className="bg-hero-bg sticky overflow-x-hidden px-10 pt-5">
             <div className="mx-auto flex max-w-5xl flex-col items-center justify-center">
               <Navigation className="w-full" />
+              <ThemeSwitcher />
             </div>
           </header>
           <main className="flex-1">{children}</main>

@@ -4,10 +4,16 @@ import { ComponentPropsWithoutRef } from "react";
 type HeadingProps = ComponentPropsWithoutRef<"h1">;
 type ParagraphProps = ComponentPropsWithoutRef<"p">;
 type UnorderedListProps = ComponentPropsWithoutRef<"ol">;
+type HorizontalRuleProps = ComponentPropsWithoutRef<"hr">;
 
 const mdxComponents = {
   h1: (props: HeadingProps) => {
-    return <h1 className="mb-2 font-sans text-3xl font-medium" {...props} />;
+    return (
+      <h1
+        className="text-heading mb-4 font-sans text-3xl font-semibold"
+        {...props}
+      />
+    );
   },
   h2: (props: HeadingProps) => (
     <h2
@@ -15,9 +21,12 @@ const mdxComponents = {
       {...props}
     />
   ),
-  p: (props: ParagraphProps) => <p className="mb-4" {...props} />,
+  p: (props: ParagraphProps) => <p className="font-body mb-4" {...props} />,
   ul: (props: UnorderedListProps) => (
-    <ol className="list-disc pl-6 [&>li]:mb-3" {...props} />
+    <ol className="font-body list-disc pl-6 [&>li]:mb-3" {...props} />
+  ),
+  hr: (props: HorizontalRuleProps) => (
+    <hr className="my-18 border-red-800" {...props} />
   ),
 };
 

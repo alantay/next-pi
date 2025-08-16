@@ -25,14 +25,6 @@ const Footer = () => {
             </li>
             <li className="mt-1">
               <a
-                href="/resume"
-                className="relative after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 after:bg-current after:transition-all after:duration-300 hover:after:w-full"
-              >
-                Resume
-              </a>
-            </li>
-            <li className="mt-1">
-              <a
                 href="/blog"
                 className="relative after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 after:bg-current after:transition-all after:duration-300 hover:after:w-full"
               >
@@ -75,14 +67,14 @@ const Footer = () => {
           <div className="flex">
             <ul className="mt-2">
               <li>
-                <a href="mailto:lun.tay@gmail.com" className="flex gap-2">
+                <a href="mailto:lun.tay.work@gmail.com" className="flex gap-2">
                   <Image
                     src="/mail-icon.svg"
                     width={20}
                     height={20}
                     alt="contact me via email"
                   />
-                  <span>lun.tay@gmail.com</span>
+                  <span>lun.tay.work@gmail.com</span>
                 </a>
               </li>
               <li>

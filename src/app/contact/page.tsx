@@ -62,7 +62,7 @@ const Contact = () => {
               href="tel:+6593656675"
               className="text-heading font-medium underline hover:no-underline"
             >
-              +65 1234 5678
+              +65 9365 6675
             </a>
             , or simply fill out the form below.
           </div>

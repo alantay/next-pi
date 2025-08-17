@@ -31,7 +31,7 @@ const ListBlog = async ({ className = "" }: { className?: string }) => {
         return (
           <li
             key={slug}
-            className="bg-blog-thumbnail dar rounded-2xl p-8 transition-colors duration-500"
+            className="bg-blog-thumbnail dar hover:bg-blog-thumbnail-hover cursor-pointer rounded-2xl p-8 transition-colors duration-500"
           >
             <Link href={`/blog/${slug}`}>
               <Image src={image} width={400} height={400} alt="" />

@@ -39,9 +39,11 @@
   --color-gray-800: oklch(0.252 0 0);
 
   --header-h: 4.75rem;
+  --radius: 0.625rem;
 }
 
 .light {
+  --link: var(--color-purple-250);
   --hero-bg: var(--color-purple-250);
   --heading-color: var(--color-red-700);
   --subheading-color: var(--color-red-700);
@@ -52,8 +54,8 @@
   --blog-toc: var(--color-red-900);
   --footer-icon: var(--color-red-900);
   --footer-title: var(--color-purple-500);
-
-  --radius: 0.625rem;
+  --mobile-nav: var(--primary);
+  --mobile-nav-link: var(--background);
 
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.145 0 0);
@@ -90,6 +92,7 @@
   --color-foreground: var(--foreground);
   --color-brand: var(--primary);
   --color-accent: var(--accent);
+  --color-link: var(--link);
   --color-hero-text: var(--color-gray-50);
   --color-body: var(--body-color);
   --color-heading: var(--heading-color);
@@ -102,6 +105,8 @@
   --color-footer-icon: var(--footer-icon);
   --color-footer-title: var(--footer-title);
   --color-blog-toc: var(--blog-toc);
+  --color-mobile-nav: var(--mobile-nav);
+  --color-mobile-nav-link: var(--mobile-nav-link);
 
   --font-sans: var(--sans-font);
   --font-body: var(--body-font);
@@ -156,6 +161,10 @@
 } */
 
 .dark {
+  --background: oklch(0.3687 0.021 300.58);
+  --foreground: oklch(0.985 0 0);
+
+  --link: var(--color-purple-220);
   --hero-bg: oklch(0.3687 0.021 300.58);
   --heading-color: var(--color-purple-220);
   --subheading-color: oklch(0.985 0 0);
@@ -166,9 +175,9 @@
   --footer-icon: var(--color-neutral-200);
   --footer-title: var(--color-purple-230);
   --blog-toc: var(--color-neutral-200);
+  --mobile-nav: oklch(0.3687 0.021 300.58);
+  --color-mobile-nav-link: var(--foreground);
 
-  --background: oklch(0.3687 0.021 300.58);
-  --foreground: oklch(0.985 0 0);
   --card: oklch(0.205 0 0);
   --card-foreground: oklch(0.985 0 0);
   --popover: oklch(0.205 0 0);

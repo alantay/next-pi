@@ -1,9 +1,14 @@
 .content {
   a[href]:not(nav *) {
-    color: var(--color-accent);
-    text-decoration: underline;
-    text-decoration-color: var(--color-accent);
+    color: var(--link);
+    text-decoration-color: var(--link);
     text-decoration-thickness: 2px;
+    font-weight: 600;
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+    }
   }
 
   code:not(pre *) {

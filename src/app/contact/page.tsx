@@ -34,7 +34,7 @@ const Contact = () => {
 
   return (
     <div className="font-body mx-auto grid max-w-5xl grid-cols-12 gap-8 p-10">
-      <div className="col-span-3">
+      <div className="col-span-6 md:col-span-3">
         <Image
           src="/contact/phone-avatar.png"
           width={1024}
@@ -44,12 +44,12 @@ const Contact = () => {
           priority
         />
       </div>
-      <div className="col-span-7">
+      <div className="col-span-12 md:col-span-7">
         <Form {...form}>
           <h1 className="text-heading mb-4 font-sans text-3xl font-semibold">
             Let&apos;s Connect
           </h1>
-          <div className="mb-4 text-base text-gray-600">
+          <div className="text-body mb-4 text-base">
             You can reach me directly at{" "}
             <a
               href="mailto:lun.tay.work@gmail.com"

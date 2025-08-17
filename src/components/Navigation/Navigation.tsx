@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
 import Logo from "../Logo";
 import styles from "./Navigation.module.css";
@@ -10,21 +10,27 @@ function Navigation({ className = "" }: { className?: string }) {
   const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
   const closeMobileNav = () => setIsMobileNavOpen(false);
 
+  useEffect(() => {
+    if (isMobileNavOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isMobileNavOpen]);
+
   const renderMenuPortal = () => {
     if (typeof window === "undefined") return null;
     const portalRoot = document.getElementById("portal-root");
     if (!portalRoot) return null;
     return createPortal(
-      <div className="motion-preset-fade absolute top-22 h-1/2 w-full bg-gray-50 text-gray-800">
+      <div className="motion-preset-fade bg-mobile-nav text-mobile-nav-link absolute top-22 h-screen w-full text-2xl">
         <ul className="flex flex-col items-center gap-4 py-20">
           <li>
             <Link href="/about" onClick={closeMobileNav}>
               About
-            </Link>
-          </li>
-          <li>
-            <Link onClick={closeMobileNav} href="/resume">
-              Resume
             </Link>
           </li>
           <li>

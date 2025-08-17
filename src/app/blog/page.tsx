@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const Page = () => (
   <div className="font-body mx-auto grid max-w-6xl grid-cols-12 gap-8 p-10 text-lg">
-    <div className="col-span-3">
+    <div className="col-span-6 md:col-span-3">
       <Image
         className="align-top"
         src="/blog/jotting-avatar.png"
@@ -12,7 +12,7 @@ const Page = () => (
         alt=""
       />
     </div>
-    <div className="col-span-9">
+    <div className="col-span-12 md:col-span-9">
       <h1 className="text-heading mb-4 font-sans text-3xl font-semibold">
         Random Thoughts, Occasional Insights
       </h1>

@@ -1,11 +1,13 @@
 "use client";
-
-import { useEffect, useState } from "react";
+import { useTheme } from "next-themes";
+import { useLayoutEffect, useState } from "react";
 
 const ThemeSwitcher = () => {
-  const [theme, setTheme] = useState<"light" | "dark">("light");
+  const { theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false); // to prevent hydration error
 
-  useEffect(() => {
+  useLayoutEffect(() => {
+    setMounted(true);
     const savedTheme = localStorage.getItem("theme");
     let newTheme: "light" | "dark" = "light";
     if (
@@ -15,23 +17,24 @@ const ThemeSwitcher = () => {
       newTheme = "dark";
     }
     setTheme(newTheme);
-    document.documentElement.classList.remove("dark", "light");
-    document.documentElement.classList.add(newTheme);
   }, []);
 
   const toggleTheme = () => {
     setTheme((prevTheme) => {
       const newTheme = prevTheme === "dark" ? "light" : "dark";
-      document.documentElement.classList.remove("dark", "light");
-      document.documentElement.classList.add(newTheme);
+
       localStorage.setItem("theme", newTheme);
       return newTheme;
     });
   };
 
+  if (!mounted) {
+    return null;
+  }
+
   return (
     <button
-      className="absolute -top-5 -right-5 cursor-pointer text-xs opacity-50"
+      className="absolute -top-5 -right-5 cursor-pointer text-xs opacity-30"
       onClick={toggleTheme}
     >
       {theme === "dark" ? (
@@ -42,7 +45,7 @@ const ThemeSwitcher = () => {
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <g clip-path="url(#clip0_392_16)">
+          <g clipPath="url(#clip0_392_16)">
             <mask
               id="mask0_392_16"
               maskUnits="userSpaceOnUse"

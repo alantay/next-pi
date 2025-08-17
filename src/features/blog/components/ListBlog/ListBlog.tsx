@@ -30,11 +30,13 @@ const ListBlog = async ({ className = "" }: { className?: string }) => {
         return (
           <li
             key={slug}
-            className="rounded-2xl bg-neutral-100 p-8 transition-colors duration-500 hover:bg-neutral-200"
+            className="bg-blog-thumbnail rounded-2xl p-8 transition-colors duration-500 hover:bg-neutral-200 dark:hover:bg-neutral-600"
           >
             <Link href={`/blog/${slug}`}>
               <Image src={image} width={400} height={400} alt="" />
-              <h2 className="mt-5 text-xl font-medium text-red-800">{title}</h2>
+              <h2 className="text-blog-thumbnail-title mt-5 text-xl font-medium">
+                {title}
+              </h2>
               <div className="mt-2 text-sm text-gray-500 italic">
                 {new Date(date).toLocaleDateString("en-US", {
                   year: "numeric",

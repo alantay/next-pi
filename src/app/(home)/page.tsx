@@ -1,6 +1,6 @@
 import ListBlog from "@/features/blog/components/ListBlog";
-import Hero from "../_components/Hero";
-import IntroSection from "../_components/IntroSection";
+import Hero from "../../features/(home)/Hero";
+import IntroSection from "../../features/(home)/IntroSection";
 
 export default async function Home() {
   return (

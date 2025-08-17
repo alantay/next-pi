@@ -1,7 +1,8 @@
 import ThemeSwitcher from "@/components/ThemeSwitcher";
 import type { Metadata } from "next";
-import Footer from "./_components/Footer";
-import Navigation from "./_components/Navigation";
+import { ThemeProvider } from "next-themes";
+import Footer from "../components/Footer";
+import Navigation from "../components/Navigation";
 import { headingFont, monoSpaceFont, sanSerifFont, serifFont } from "./fonts";
 import "./globals.css";
 
@@ -18,20 +19,31 @@ export default function RootLayout({
   return (
     <html
       lang="en"
+      suppressHydrationWarning
       className={`${headingFont.variable} ${monoSpaceFont.variable} ${serifFont.variable} ${sanSerifFont.variable}`}
     >
-      <body className={`text-body bg-background mx-auto antialiased`}>
-        <div className="flex min-h-screen flex-col">
-          <header className="bg-hero-bg sticky overflow-x-hidden px-10 pt-5">
-            <div className="mx-auto flex max-w-5xl flex-col items-center justify-center">
-              <Navigation className="w-full" />
-              <ThemeSwitcher />
-            </div>
-          </header>
-          <main className="flex-1">{children}</main>
-          <Footer />
-        </div>
-        <div id="portal-root"></div>
+      <body
+        className={`text-body bg-background mx-auto antialiased transition-colors duration-300`}
+        suppressHydrationWarning={true}
+      >
+        <ThemeProvider
+          attribute="class" // uses 'class' strategy, so adds 'light'/'dark' to <html>
+          defaultTheme="system"
+          enableSystem={true}
+          storageKey="theme"
+        >
+          <div className="flex min-h-screen flex-col">
+            <header className="bg-hero-bg relative overflow-x-hidden px-10 pt-5 transition-colors duration-300">
+              <div className="mx-auto flex max-w-5xl flex-col items-center justify-center">
+                <Navigation className="w-full" />
+                <ThemeSwitcher />
+              </div>
+            </header>
+            <main className="flex-1">{children}</main>
+            <Footer />
+          </div>
+          <div id="portal-root"></div>
+        </ThemeProvider>
       </body>
     </html>
   );

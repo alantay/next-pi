@@ -30,5 +30,5 @@ export const sanSerifFont = Roboto({
 export const monoSpaceFont = IBM_Plex_Mono({
   subsets: ["latin"],
   variable: "--mono-font",
-  weight: ["400", "500"],
+  weight: ["400", "500", "600"],
 });

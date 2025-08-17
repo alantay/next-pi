@@ -7,11 +7,13 @@
   }
 
   code:not(pre *) {
-    background-color: #c1b4ca;
+    background-color: var(--color-purple-210);
     border-radius: 4px;
     padding: 0.2rem 0.5rem;
     font-family: var(--font-mono);
     font-size: 0.8rem;
+    color: var(--color-gray-800);
+    font-weight: 500;
   }
 
   pre,

@@ -43,13 +43,13 @@ export default async function PostPage({
         </strong>
       </p>
       <div className="mt-5 grid grid-cols-5 gap-14">
-        <div className={`${Style.content} col-span-4`}>
+        <div className={`${Style.content} col-span-5 lg:col-span-4`}>
           <Image src={image} alt={imageAltText} width={400} height={400} />
           <Post />
         </div>
-        <div>
+        <div className="hidden lg:block">
           {toc && toc.length > 0 && (
-            <nav className="sticky top-32 mb-8 text-base text-red-900">
+            <nav className="text-blog-toc sticky top-32 mb-8 text-base">
               <h2 className="mb-2 font-bold">TABLE OF CONTENTS</h2>
               <ul className="list-disc pl-5">
                 {toc.map((item: any) => (

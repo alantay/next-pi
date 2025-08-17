@@ -217,3 +217,7 @@
     @apply bg-background text-foreground;
   }
 }
+
+body {
+  text-underline-offset: 0.25em;
+}

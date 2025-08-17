@@ -47,7 +47,7 @@ const Contact = () => {
       <div className="col-span-7">
         <Form {...form}>
           <h1 className="text-heading mb-4 font-sans text-3xl font-semibold">
-            Let's Connect
+            Let&apos;s Connect
           </h1>
           <div className="mb-4 text-base text-gray-600">
             You can reach me directly at{" "}

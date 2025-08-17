@@ -8,7 +8,8 @@ const Hero = ({ className = "" }: { className?: string }) => {
       <div className="flex w-full max-w-5xl flex-col-reverse items-center gap-5 md:flex-row lg:gap-2">
         <div className="text-hero-text max-w-100 font-sans text-4xl leading-snug font-bold">
           <div>
-            Writing down what I learn, in case it's useful to someone else too.
+            Writing down what I learn, in case it&apos;s useful to someone else
+            too.
           </div>
         </div>
         <Image

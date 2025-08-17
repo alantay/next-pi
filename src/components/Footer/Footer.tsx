@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import Logo from "../Logo";
 const Footer = () => {
   return (
@@ -11,20 +12,20 @@ const Footer = () => {
           <div className="text-footer-title font-semibold">NAVIGATION</div>
           <ul>
             <li className="mt-2">
-              <a
+              <Link
                 href="/about"
                 className="relative after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 after:bg-current after:transition-all after:duration-300 hover:after:w-full"
               >
                 About
-              </a>
+              </Link>
             </li>
             <li className="mt-1">
-              <a
+              <Link
                 href="/blog"
                 className="relative after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 after:bg-current after:transition-all after:duration-300 hover:after:w-full"
               >
                 Blog
-              </a>
+              </Link>
             </li>
             <li className="mt-1">
               <a
@@ -39,7 +40,7 @@ const Footer = () => {
         <div className="flex flex-col text-sm font-medium md:col-span-2">
           <div className="text-footer-title font-semibold">SOCIALS</div>
           <div className="mt-2 flex gap-2">
-            <a href="https://github.com/alantay" target="_blank ">
+            <Link href="https://github.com/alantay" target="_blank ">
               <svg
                 width="20"
                 height="20"
@@ -53,7 +54,7 @@ const Footer = () => {
                   className="fill-footer-icon"
                 />
               </svg>
-            </a>
+            </Link>
             <a href="https://www.linkedin.com/in/tay-alan" target="_blank ">
               <svg
                 width="20"
@@ -76,7 +77,10 @@ const Footer = () => {
           <div className="flex">
             <ul className="mt-2">
               <li>
-                <a href="mailto:lun.tay.work@gmail.com" className="flex gap-2">
+                <Link
+                  href="mailto:lun.tay.work@gmail.com"
+                  className="flex gap-2"
+                >
                   <svg
                     width="24"
                     height="24"
@@ -107,7 +111,7 @@ const Footer = () => {
                   </svg>
 
                   <span>lun.tay.work@gmail.com</span>
-                </a>
+                </Link>
               </li>
               <li>
                 <a href="tel:+6593656675" className="mt-1 flex gap-2">

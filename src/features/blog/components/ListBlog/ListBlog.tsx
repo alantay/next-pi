@@ -17,6 +17,7 @@ const ListBlog = async ({ className = "" }: { className?: string }) => {
 
           return { ...frontmatter, slug };
         } catch (e) {
+          console.warn(e);
           return null;
         }
       }
@@ -30,7 +31,7 @@ const ListBlog = async ({ className = "" }: { className?: string }) => {
         return (
           <li
             key={slug}
-            className="bg-blog-thumbnail rounded-2xl p-8 transition-colors duration-500 hover:bg-neutral-200 dark:hover:bg-neutral-600"
+            className="bg-blog-thumbnail dar rounded-2xl p-8 transition-colors duration-500 hover:bg-neutral-200"
           >
             <Link href={`/blog/${slug}`}>
               <Image src={image} width={400} height={400} alt="" />

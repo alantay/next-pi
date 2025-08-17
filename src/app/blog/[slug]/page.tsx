@@ -52,7 +52,7 @@ export default async function PostPage({
             <nav className="text-blog-toc sticky top-32 mb-8 text-base">
               <h2 className="mb-2 font-bold">TABLE OF CONTENTS</h2>
               <ul className="list-disc pl-5">
-                {toc.map((item: any) => (
+                {toc.map((item: { id: string; title: string }) => (
                   <li key={item.title} className="mb-1">
                     <a href={`#${item.id}`} className="hover:underline">
                       {item.title}

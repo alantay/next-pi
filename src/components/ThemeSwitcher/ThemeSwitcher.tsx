@@ -17,7 +17,7 @@ const ThemeSwitcher = () => {
       newTheme = "dark";
     }
     setTheme(newTheme);
-  }, []);
+  }, [setTheme]);
 
   const toggleTheme = () => {
     setTheme((prevTheme) => {

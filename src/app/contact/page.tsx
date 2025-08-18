@@ -113,7 +113,9 @@ const Contact = () => {
                 </FormItem>
               )}
             />
-            <Button type="submit">Submit</Button>
+            <Button className="cursor-pointer" type="submit">
+              Submit
+            </Button>
           </form>
         </Form>
       </div>

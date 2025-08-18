@@ -4,11 +4,11 @@ import Logo from "../Logo";
 const Footer = () => {
   return (
     <footer className="bg-footer relative p-10">
-      <div className="mx-auto grid max-w-5xl grid-cols-1 gap-10 sm:grid-cols-2 md:grid-cols-9 md:gap-0">
-        <div className="flex flex-col justify-center md:col-span-3">
+      <div className="mx-auto flex max-w-5xl flex-col gap-10 md:flex-row md:justify-between md:gap-10 lg:justify-start lg:gap-20">
+        <div className="flex flex-col justify-center">
           <Logo className="text-footer-title" />
         </div>
-        <div className="flex flex-col text-sm font-medium md:col-span-2">
+        <div className="flex flex-col text-sm font-medium">
           <div className="text-footer-title font-semibold">NAVIGATION</div>
           <ul>
             <li className="mt-2">
@@ -37,7 +37,7 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-        <div className="flex flex-col text-sm font-medium md:col-span-2">
+        <div className="flex flex-col text-sm font-medium">
           <div className="text-footer-title font-semibold">SOCIALS</div>
           <div className="mt-2 flex gap-2">
             <Link href="https://github.com/alantay" target="_blank ">
@@ -72,7 +72,7 @@ const Footer = () => {
             </a>
           </div>
         </div>
-        <div className="flex flex-col text-sm font-medium md:col-span-2">
+        <div className="flex flex-col text-sm font-medium">
           <div className="text-footer-title font-semibold">CONTACT</div>
           <div className="flex">
             <ul className="mt-2">
@@ -137,7 +137,7 @@ const Footer = () => {
               width={259}
               height={169}
               alt=""
-              className="absolute top-0 right-0 hidden xl:block dark:brightness-75"
+              className="absolute top-0 right-0 hidden lg:block dark:brightness-75"
             />
           </div>
         </div>

@@ -8,8 +8,8 @@ const Introsection = ({ className = "" }: { className?: string }) => {
           src="/avatar-laptop.png"
           width={620}
           height={932}
-          className="w-1/3"
-          alt="image of man in labcoat holding a test tube"
+          className="w-1/2 sm:w-1/3 md:w-1/4"
+          alt="image of man using laptop"
         />
 
         <div className="flex flex-col items-start justify-center">

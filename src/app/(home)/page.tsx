@@ -5,7 +5,7 @@ import IntroSection from "../../features/(home)/IntroSection";
 export default async function Home() {
   return (
     <>
-      <Hero />
+      <Hero className="-m-5 md:-m-10" />
       <IntroSection />
       <section className="mx-auto flex max-w-5xl flex-col justify-center px-10 py-20">
         <h2 className="text-heading text-xl font-semibold">

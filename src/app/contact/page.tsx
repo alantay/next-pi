@@ -33,8 +33,8 @@ const Contact = () => {
   };
 
   return (
-    <div className="font-body mx-auto grid max-w-5xl grid-cols-12 p-5 md:gap-8 md:p-10">
-      <div className="col-span-5 md:col-span-3">
+    <div className="font-body mx-auto grid max-w-5xl grid-cols-6 md:grid-cols-12 md:gap-8">
+      <div className="col-span-3 sm:col-span-2 md:col-span-3">
         <Image
           src="/contact/phone-avatar.png"
           width={1024}
@@ -46,7 +46,7 @@ const Contact = () => {
       </div>
       <div className="col-span-12 md:col-span-9 lg:col-span-7">
         <Form {...form}>
-          <h1 className="text-heading mb-4 font-sans text-3xl font-semibold">
+          <h1 className="text-heading mb-2 font-sans text-3xl font-semibold">
             Let&apos;s Connect
           </h1>
           <div className="text-body mb-8 text-lg">

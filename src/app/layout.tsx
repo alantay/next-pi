@@ -33,13 +33,13 @@ export default function RootLayout({
           storageKey="theme"
         >
           <div className="flex min-h-screen flex-col">
-            <header className="bg-hero-bg relative overflow-x-hidden px-10 pt-5 transition-colors duration-300">
+            <header className="bg-hero-bg relative overflow-x-hidden px-5 pt-5 transition-colors duration-300 md:px-10">
               <div className="mx-auto flex max-w-5xl flex-col items-center justify-center">
                 <Navigation className="w-full" />
                 <ThemeSwitcher />
               </div>
             </header>
-            <main className="flex-1">{children}</main>
+            <main className="flex-1 p-5 md:p-10">{children}</main>
             <Footer />
           </div>
           <div id="portal-root"></div>

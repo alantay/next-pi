@@ -31,7 +31,7 @@ function Navigation({ className = "" }: { className?: string }) {
     const portalRoot = document.getElementById("portal-root");
     if (!portalRoot) return null;
     return createPortal(
-      <div className="motion-preset-fade bg-mobile-nav text-mobile-nav-link absolute top-22 h-screen w-full text-2xl">
+      <div className="motion-preset-fade bg-mobile-nav text-mobile-nav-link absolute top-18 h-screen w-full text-2xl">
         <ul className="flex flex-col items-center gap-4 py-20">
           <li>
             <Link href="/about" onClick={closeMobileNav}>

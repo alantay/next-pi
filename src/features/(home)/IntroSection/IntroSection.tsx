@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const Introsection = ({ className = "" }: { className?: string }) => {
   return (
-    <section className={`flex justify-center px-10 py-20 ${className}`}>
+    <section className={`flex justify-center pt-30 pb-10 ${className}`}>
       <div className="flex w-full max-w-5xl flex-col items-center justify-center gap-10 md:flex-row md:items-center">
         <Image
           src="/avatar-laptop.png"

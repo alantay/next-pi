@@ -2,7 +2,7 @@ import ListBlog from "@/features/blog/components/ListBlog";
 import Image from "next/image";
 
 const Page = () => (
-  <div className="font-body mx-auto grid max-w-6xl grid-cols-12 gap-8 p-10 text-lg">
+  <div className="font-body mx-auto grid max-w-6xl grid-cols-12 gap-8 text-lg">
     <div className="col-span-6 md:col-span-3">
       <Image
         className="align-top"

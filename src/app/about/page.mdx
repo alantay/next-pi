@@ -2,18 +2,18 @@ import Timeline from "@/features/resume/components/Timeline";
 import workExperience from "@/features/resume/data/work-experience-timeline.json";
 import Image from "next/image";
 
-<div className="p-10 mx-auto text-lg font-body max-w-5xl">
-  <article className="grid grid-cols-12 items-start gap-8 ">
-    <div className="col-span-6 sm:col-span-4 md:col-span-3">
+<div className="mx-auto text-lg font-body max-w-5xl">
+  <article className="grid grid-cols-6 md:grid-cols-12 items-start gap-2 md:gap-8 ">
+    <div className="col-span-4 sm:col-span-2 md:col-span-3">
       <Image
         src="/about/hiking-avatar.png"
         alt="profile"
-        width={1024}
+        width={1024} 
         height={1536}
         className="w-full rounded-xl"
       />
     </div>
-    <div className="col-span-12 md:col-span-9">
+    <div className="col-span-6 md:col-span-9">
       # Hey, I'm Alan.
 
       I'm a developer who cares about building things that feel good to use, fast, accessible, and thoughtfully designed (with only the occasional overengineering).
@@ -37,13 +37,13 @@ import Image from "next/image";
 ---
 
   <article>
-    <div className="grid grid-cols-12 gap-8">
+    <div className="grid grid-cols-6 md:grid-cols-12 gap-2 md:gap-8">
       <Image
         src="/about/work-avatar.png"
         width={931}
         height={893}
         alt="avatar in business wear using the laptop"
-        className="col-span-6 sm:col-span-4 md:col-span-3"
+        className="col-span-4 sm:col-span-2 md:col-span-3"
       />
       <div className="col-span-12 md:col-span-9 mt-5">
         <h2 className="mb-4 font-sans text-3xl font-semibold text-heading">Work Experience</h2>

@@ -12,26 +12,17 @@ const Footer = () => {
           <div className="text-footer-title font-semibold">NAVIGATION</div>
           <ul>
             <li className="mt-2">
-              <Link
-                href="/about"
-                className="relative after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 after:bg-current after:transition-all after:duration-300 hover:after:w-full"
-              >
+              <Link href="/about" className="relative w-full">
                 About
               </Link>
             </li>
             <li className="mt-1">
-              <Link
-                href="/blog"
-                className="relative after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 after:bg-current after:transition-all after:duration-300 hover:after:w-full"
-              >
+              <Link href="/blog" className="relative w-full">
                 Blog
               </Link>
             </li>
             <li className="mt-1">
-              <a
-                href="/contact"
-                className="relative after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 after:bg-current after:transition-all after:duration-300 hover:after:w-full"
-              >
+              <a href="/contact" className="relative w-full">
                 Contact
               </a>
             </li>

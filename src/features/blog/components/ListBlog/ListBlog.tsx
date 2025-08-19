@@ -27,7 +27,7 @@ const ListBlog = async ({ className = "" }: { className?: string }) => {
   return (
     <ul className={`${className}`}>
       {posts.map((post) => {
-        const { title, image, date, slug } = post;
+        const { title, image, date, slug, summary } = post;
         return (
           <li
             key={slug}
@@ -53,6 +53,7 @@ const ListBlog = async ({ className = "" }: { className?: string }) => {
                   day: "numeric",
                 })}
               </div>
+              <p className="mt-4 text-base">{summary}</p>
             </Link>
           </li>
         );

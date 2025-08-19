@@ -38,7 +38,7 @@ const ThemeSwitcher = () => {
       onClick={toggleTheme}
     >
       <span className="opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-        {theme === "dark" ? "light mode" : "dark mode"}
+        {theme === "dark" ? "Light mode" : "Dark mode"}
       </span>
       {theme === "dark" ? (
         <svg

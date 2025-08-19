@@ -70,7 +70,7 @@ const Footer = () => {
               <li>
                 <Link
                   href="mailto:lun.tay.work@gmail.com"
-                  className="flex gap-2"
+                  className="flex items-center gap-2"
                 >
                   <svg
                     width="24"
@@ -105,7 +105,10 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <a href="tel:+6593656675" className="mt-1 flex gap-2">
+                <Link
+                  href="tel:+6593656675"
+                  className="mt-1 flex items-center gap-2"
+                >
                   <svg
                     width="24"
                     height="24"
@@ -120,7 +123,7 @@ const Footer = () => {
                     />
                   </svg>
                   <span>+65 9365 6675</span>
-                </a>
+                </Link>
               </li>
             </ul>
             <Image

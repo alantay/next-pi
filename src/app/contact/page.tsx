@@ -90,7 +90,7 @@ const Contact = () => {
                 <FormItem>
                   <FormLabel htmlFor="email">Email</FormLabel>
                   <FormControl>
-                    <Input {...field} className="bg-gray-100 text-2xl" />
+                    <Input {...field} className="bg-gray-100" />
                   </FormControl>
                   <FormMessage />
                 </FormItem>

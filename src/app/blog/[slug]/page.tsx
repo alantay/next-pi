@@ -1,5 +1,4 @@
 import { readdir } from "fs/promises";
-import Image from "next/image";
 import path from "path";
 import Style from "./page.module.css";
 
@@ -31,8 +30,8 @@ export default async function PostPage({
 
   return (
     <article className="font-body mx-auto max-w-5xl text-lg">
-      <h1 className="mb-2 font-sans text-3xl font-medium">{title}</h1>
-      <p className="mb-4 text-base italic">
+      {/* <h1 className="mb-2 font-sans text-3xl font-medium">{title}</h1> */}
+      {/* <p className="mb-4 text-base italic">
         Last updated on{" "}
         <strong>
           {new Date(date).toLocaleDateString("en-US", {
@@ -41,10 +40,9 @@ export default async function PostPage({
             day: "numeric",
           })}
         </strong>
-      </p>
+      </p> */}
       <div className="mt-5 grid grid-cols-5 gap-14">
         <div className={`${Style.content} col-span-5 lg:col-span-4`}>
-          <Image src={image} alt={imageAltText} width={400} height={400} />
           <Post />
         </div>
         <div className="hidden lg:block">

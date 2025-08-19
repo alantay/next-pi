@@ -4,7 +4,7 @@ import Image from "next/image";
 export const frontmatter = {
   title: "Quick Accessibility: Image Alt Text",
   date: "2025-07-29",
-  image: "/blog/quick-a11y-fix-image-tag/images/a11y-main-img.png",
+  image: "/blog/quick-a11y-fix-image-tag/images/a11y-hero-dark.png",
   imageAltText:
     "Illustration of a person using a computer to implement web accessibility features, showing examples of alt text for an image of a cat, an ARIA-label for a button, and the concept of tab order.",
   toc: [
@@ -18,6 +18,27 @@ export const frontmatter = {
     { title: "Things to avoid", id: "to-avoid" },
   ],
 };
+
+# {frontmatter.title}
+
+<div className="mb-4 flex text-base italic">
+  Last updated on
+  <strong className="ml-1">
+    {new Date(frontmatter.date).toLocaleDateString("en-US", {
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+    })}
+  </strong>
+</div>
+
+<Image
+  src={frontmatter.image}
+  alt={frontmatter.imageAltText}
+  width={300}
+  height={300}
+  className="mb-5 rounded"
+/>
 
 <div id="introduction" className="relative -top-100"></div>
 

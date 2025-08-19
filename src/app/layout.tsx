@@ -1,4 +1,3 @@
-import ThemeSwitcher from "@/components/ThemeSwitcher";
 import type { Metadata } from "next";
 import { ThemeProvider } from "next-themes";
 import Footer from "../components/Footer";
@@ -34,9 +33,8 @@ export default function RootLayout({
         >
           <div className="flex min-h-screen flex-col">
             <header className="bg-hero-bg relative overflow-x-hidden px-5 pt-5 transition-colors duration-300 md:px-10">
-              <div className="mx-auto flex max-w-5xl flex-col items-center justify-center">
+              <div className="mx-auto flex max-w-5xl flex-col items-center justify-center pb-6 sm:flex-row">
                 <Navigation className="w-full" />
-                <ThemeSwitcher />
               </div>
             </header>
             <main className="flex-1 p-5 md:p-10">{children}</main>

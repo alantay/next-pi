@@ -1,29 +1,9 @@
-import fs from "fs/promises";
 import Image from "next/image";
 import Link from "next/link";
-import path from "path";
+import { getBlogPosts } from "../../lib";
 
 const ListBlog = async ({ className = "" }: { className?: string }) => {
-  const blogDir = path.join(process.cwd(), "src/content/blog");
-  const entries = await fs.readdir(blogDir, { withFileTypes: true });
-  const posts = await Promise.all(
-    entries.map(async (entry) => {
-      if (entry.isDirectory()) {
-        const slug = entry.name;
-        try {
-          const { frontmatter } = await import(
-            `@/content/blog/${slug}/index.mdx`
-          );
-
-          return { ...frontmatter, slug };
-        } catch (e) {
-          console.warn(e);
-          return null;
-        }
-      }
-    }),
-  );
-
+  const posts = await getBlogPosts();
   return (
     <ul className={`${className}`}>
       {posts.map((post) => {
@@ -31,10 +11,10 @@ const ListBlog = async ({ className = "" }: { className?: string }) => {
         return (
           <li
             key={slug}
-            className="bg-blog-thumbnail dar hover:bg-blog-thumbnail-hover cursor-pointer rounded-2xl p-4 transition-colors duration-500"
+            className="bg-blog-thumbnail dar hover:bg-blog-thumbnail-hover p4 cursor-pointer rounded-2xl transition-colors duration-500 md:p-6"
           >
             <Link href={`/blog/${slug}`}>
-              <div className="relative h-40">
+              <div className="relative h-70">
                 <Image
                   src={image}
                   fill={true}

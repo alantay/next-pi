@@ -26,21 +26,10 @@ export default async function PostPage({
   const { default: Post, frontmatter } = await import(
     `@/content/blog/${slug}/index.mdx`
   );
-  const { title, date, toc, image, imageAltText } = frontmatter;
+  const { toc } = frontmatter;
 
   return (
     <article className="font-body mx-auto max-w-5xl text-lg">
-      {/* <h1 className="mb-2 font-sans text-3xl font-medium">{title}</h1> */}
-      {/* <p className="mb-4 text-base italic">
-        Last updated on{" "}
-        <strong>
-          {new Date(date).toLocaleDateString("en-US", {
-            year: "numeric",
-            month: "long",
-            day: "numeric",
-          })}
-        </strong>
-      </p> */}
       <div className="mt-5 grid grid-cols-5 gap-14">
         <div className={`${Style.content} col-span-5 lg:col-span-4`}>
           <Post />

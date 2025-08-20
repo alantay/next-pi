@@ -7,11 +7,11 @@ export default async function Home() {
     <>
       <Hero className="-m-5 md:-m-10" />
       <IntroSection />
-      <section className="mx-auto flex max-w-5xl flex-col justify-center px-10 py-20">
+      <section className="mx-auto flex max-w-5xl flex-col justify-center py-20 md:px-10">
         <h2 className="text-heading text-xl font-semibold">
           LATEST POSTS & ARTICLES
         </h2>
-        <ListBlog className="mt-5 grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3" />
+        <ListBlog className="mt-5 grid grid-cols-1 gap-10 sm:grid-cols-2 md:grid-cols-2" />
       </section>
     </>
   );

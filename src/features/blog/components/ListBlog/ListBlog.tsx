@@ -11,10 +11,10 @@ const ListBlog = async ({ className = "" }: { className?: string }) => {
         return (
           <li
             key={slug}
-            className="bg-blog-thumbnail dar hover:bg-blog-thumbnail-hover p4 cursor-pointer rounded-2xl transition-colors duration-500 md:p-6"
+            className="bg-blog-thumbnail dar hover:bg-blog-thumbnail-hover cursor-pointer rounded-2xl p-4 transition-colors duration-500 md:p-6"
           >
             <Link href={`/blog/${slug}`}>
-              <div className="relative h-70">
+              <div className="md:30 relative h-70">
                 <Image
                   src={image}
                   fill={true}

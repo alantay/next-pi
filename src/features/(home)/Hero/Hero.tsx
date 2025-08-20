@@ -8,7 +8,7 @@ const Hero = ({ className = "" }: { className?: string }) => {
       <div className="flex w-full max-w-5xl flex-col-reverse items-center gap-5 md:flex-row lg:gap-2">
         <div className="text-hero-text max-w-100 font-sans text-3xl leading-snug font-semibold md:text-4xl">
           Writing down things in case <s className="inline-block">I forget</s>,{" "}
-          it's useful to someone else.
+          it&apos;s useful to someone else.
         </div>
         <Image
           className="md:w-1/2"
